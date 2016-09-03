@@ -1,0 +1,7 @@
+hc5661a)
+  ucidef_add_switch "switch0" \
+    "0:lan" "1:lan" "2:lan" "3:lan" "4:wan" "6@eth0"
+  lan_mac=`mtd_get_mac_ascii bdinfo "Vfac_mac "`
+  [ -n "$lan_mac" ] || lan_mac=$(cat /sys/class/net/eth0/address)
+  wan_mac=$(macaddr_add "$lan_mac" 1)
+  ;;
