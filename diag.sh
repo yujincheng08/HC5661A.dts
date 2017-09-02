@@ -1,3 +1,3 @@
-c5661a)
+hc5661a)
   status_led="$board:blue:system"
   ;;
